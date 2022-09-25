@@ -29,8 +29,11 @@ namespace UserStrory
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.Boys = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Girls = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Dedust = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Debtor = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,15 +45,18 @@ namespace UserStrory
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Progam = new System.Windows.Forms.ToolStripMenuItem();
             this.View1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.Add1tool = new System.Windows.Forms.ToolStripButton();
             this.Changetool = new System.Windows.Forms.ToolStripButton();
-            this.Delitetool = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.Debtor = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Boys = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Girls = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Dedust = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Delitetool = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.View1)).BeginInit();
@@ -69,6 +75,34 @@ namespace UserStrory
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // Boys
+            // 
+            this.Boys.AutoSize = false;
+            this.Boys.Name = "Boys";
+            this.Boys.Size = new System.Drawing.Size(118, 17);
+            this.Boys.Text = "Всего мальчиков 0";
+            // 
+            // Girls
+            // 
+            this.Girls.AutoSize = false;
+            this.Girls.Name = "Girls";
+            this.Girls.Size = new System.Drawing.Size(118, 17);
+            this.Girls.Text = "Всего девочек 0";
+            // 
+            // Dedust
+            // 
+            this.Dedust.AutoSize = false;
+            this.Dedust.Name = "Dedust";
+            this.Dedust.Size = new System.Drawing.Size(118, 17);
+            this.Dedust.Text = "Отчисленных 0";
+            // 
+            // Debtor
+            // 
+            this.Debtor.AutoSize = false;
+            this.Debtor.Name = "Debtor";
+            this.Debtor.Size = new System.Drawing.Size(118, 17);
+            this.Debtor.Text = "Должников 0";
             // 
             // menuStrip2
             // 
@@ -93,7 +127,7 @@ namespace UserStrory
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(109, 22);
             this.Exit.Text = "Выход";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -111,26 +145,26 @@ namespace UserStrory
             // Add1
             // 
             this.Add1.Name = "Add1";
-            this.Add1.Size = new System.Drawing.Size(180, 22);
+            this.Add1.Size = new System.Drawing.Size(128, 22);
             this.Add1.Text = "Добавить";
             // 
             // Change
             // 
             this.Change.Enabled = false;
             this.Change.Name = "Change";
-            this.Change.Size = new System.Drawing.Size(180, 22);
+            this.Change.Size = new System.Drawing.Size(128, 22);
             this.Change.Text = "Изменить";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(125, 6);
             // 
             // Delite
             // 
             this.Delite.Enabled = false;
             this.Delite.Name = "Delite";
-            this.Delite.Size = new System.Drawing.Size(180, 22);
+            this.Delite.Size = new System.Drawing.Size(128, 22);
             this.Delite.Text = "Удалить";
             // 
             // справкаToolStripMenuItem
@@ -144,17 +178,81 @@ namespace UserStrory
             // Progam
             // 
             this.Progam.Name = "Progam";
-            this.Progam.Size = new System.Drawing.Size(180, 22);
+            this.Progam.Size = new System.Drawing.Size(149, 22);
             this.Progam.Text = "О программе";
             this.Progam.Click += new System.EventHandler(this.Progam_Click);
             // 
             // View1
             // 
+            this.View1.AllowUserToAddRows = false;
+            this.View1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.View1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.View1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.View1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
             this.View1.Location = new System.Drawing.Point(0, 52);
             this.View1.Name = "View1";
+            this.View1.ReadOnly = true;
+            this.View1.RowHeadersVisible = false;
+            this.View1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.View1.Size = new System.Drawing.Size(800, 373);
             this.View1.TabIndex = 4;
+            this.View1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.View1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "ФИО";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Пол";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 52;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Дата рождения";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Возвраст";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 80;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Средняя оценка";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 105;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Отчислен";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 80;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Задолженность";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 112;
             // 
             // toolStrip2
             // 
@@ -171,63 +269,34 @@ namespace UserStrory
             // 
             // Add1tool
             // 
-            this.Add1tool.Image = ((System.Drawing.Image)(resources.GetObject("Add1tool.Image")));
             this.Add1tool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Add1tool.Name = "Add1tool";
-            this.Add1tool.Size = new System.Drawing.Size(79, 22);
+            this.Add1tool.Size = new System.Drawing.Size(63, 22);
             this.Add1tool.Text = "Добавить";
             this.Add1tool.Click += new System.EventHandler(this.Add1tool_Click);
             // 
             // Changetool
             // 
             this.Changetool.Enabled = false;
-            this.Changetool.Image = ((System.Drawing.Image)(resources.GetObject("Changetool.Image")));
             this.Changetool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Changetool.Name = "Changetool";
-            this.Changetool.Size = new System.Drawing.Size(81, 22);
+            this.Changetool.Size = new System.Drawing.Size(65, 22);
             this.Changetool.Text = "Изменить";
-            // 
-            // Delitetool
-            // 
-            this.Delitetool.Enabled = false;
-            this.Delitetool.Image = ((System.Drawing.Image)(resources.GetObject("Delitetool.Image")));
-            this.Delitetool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Delitetool.Name = "Delitetool";
-            this.Delitetool.Size = new System.Drawing.Size(71, 22);
-            this.Delitetool.Text = "Удалить";
+            this.Changetool.Click += new System.EventHandler(this.Changetool_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // Debtor
+            // Delitetool
             // 
-            this.Debtor.AutoSize = false;
-            this.Debtor.Name = "Debtor";
-            this.Debtor.Size = new System.Drawing.Size(118, 17);
-            this.Debtor.Text = "Должников 0";
-            // 
-            // Boys
-            // 
-            this.Boys.AutoSize = false;
-            this.Boys.Name = "Boys";
-            this.Boys.Size = new System.Drawing.Size(118, 17);
-            this.Boys.Text = "Всего мальчиков 0";
-            // 
-            // Girls
-            // 
-            this.Girls.AutoSize = false;
-            this.Girls.Name = "Girls";
-            this.Girls.Size = new System.Drawing.Size(118, 17);
-            this.Girls.Text = "Всего девочек 0";
-            // 
-            // Dedust
-            // 
-            this.Dedust.AutoSize = false;
-            this.Dedust.Name = "Dedust";
-            this.Dedust.Size = new System.Drawing.Size(118, 17);
-            this.Dedust.Text = "Отчисленных 0";
+            this.Delitetool.Enabled = false;
+            this.Delitetool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Delitetool.Name = "Delitetool";
+            this.Delitetool.Size = new System.Drawing.Size(55, 22);
+            this.Delitetool.Text = "Удалить";
+            this.Delitetool.Click += new System.EventHandler(this.Delitetool_Click);
             // 
             // Form1
             // 
@@ -275,6 +344,13 @@ namespace UserStrory
         private System.Windows.Forms.ToolStripStatusLabel Girls;
         private System.Windows.Forms.ToolStripStatusLabel Dedust;
         private System.Windows.Forms.ToolStripStatusLabel Debtor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
 

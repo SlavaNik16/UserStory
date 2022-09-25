@@ -82,6 +82,7 @@ namespace UserStrory
             if (comboBox1.SelectedIndex >= 0)
             {
                 student.Gender = (Gender)comboBox1.SelectedItem;
+                
             }
         }
 

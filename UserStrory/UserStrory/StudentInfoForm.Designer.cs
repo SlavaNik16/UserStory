@@ -29,7 +29,6 @@ namespace UserStrory
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentInfoForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,7 +77,6 @@ namespace UserStrory
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(14, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(55, 51);
@@ -240,7 +238,6 @@ namespace UserStrory
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Информация о студенте";
             this.panel1.ResumeLayout(false);
@@ -259,17 +256,17 @@ namespace UserStrory
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.CheckBox Deduct1;
-        private System.Windows.Forms.CheckBox Debtor1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button butSave;
         private System.Windows.Forms.Button butCanсel;
+        public System.Windows.Forms.TextBox Name;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.NumericUpDown numericUpDown1;
+        public System.Windows.Forms.CheckBox Deduct1;
+        public System.Windows.Forms.CheckBox Debtor1;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }
