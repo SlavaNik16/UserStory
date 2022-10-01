@@ -1,0 +1,11 @@
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\bin\Debug\UserStrory.exe.config
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\bin\Debug\UserStrory.exe
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\bin\Debug\UserStrory.pdb
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.Form1.resources
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.Properties.Resources.resources
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.csproj.GenerateResource.cache
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.csproj.CoreCompileInputs.cache
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.exe
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.pdb
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.csproj.AssemblyReference.cache
+C:\Users\1519-20\source\repos\UserStrory\UserStrory\obj\Debug\UserStrory.StudentInfoForm.resources
